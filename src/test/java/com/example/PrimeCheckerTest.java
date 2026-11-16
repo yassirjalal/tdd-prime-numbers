@@ -18,18 +18,14 @@ public class PrimeCheckerTest {
     }
 
     @ParameterizedTest
-    @ValueSource(ints = {2, 3})
+    @ValueSource(ints = {4})
+    public void testCompositeNumbersAreNotPrime(int number) {
+        assertFalse(primeChecker.isPrime(number), number + " should not be considered a prime number");
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {2, 3, 5})
     public void testPrimeNumbers(int number) {
         assertTrue(primeChecker.isPrime(number), number + " should be considered a prime number");
-    }
-
-    @Test
-    public void test4IsNotPrime() {
-        assertFalse(primeChecker.isPrime(4), "4 should not be considered a prime number");
-    }
-
-    @Test
-    public void test5IsPrime() {
-        assertTrue(primeChecker.isPrime(5), "5 should be considered a prime number");
     }
 }
