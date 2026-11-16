@@ -43,4 +43,9 @@ public class PrimeCheckerTest {
     public void test8IsNotPrime() {
         assertFalse(primeChecker.isPrime(8), "8 should not be considered a prime number");
     }
+
+    @Test
+    public void test9IsNotPrime() {
+        assertFalse(primeChecker.isPrime(9), "9 should not be considered a prime number");
+    }
 }
