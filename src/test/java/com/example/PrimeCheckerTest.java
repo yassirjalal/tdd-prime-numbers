@@ -28,4 +28,19 @@ public class PrimeCheckerTest {
     public void testPrimeNumbers(int number) {
         assertTrue(primeChecker.isPrime(number), number + " should be considered a prime number");
     }
+
+    @Test
+    public void test6IsNotPrime() {
+        assertFalse(primeChecker.isPrime(6), "6 should not be considered a prime number");
+    }
+
+    @Test
+    public void test7IsPrime() {
+        assertTrue(primeChecker.isPrime(7), "7 should be considered a prime number");
+    }
+
+    @Test
+    public void test8IsNotPrime() {
+        assertFalse(primeChecker.isPrime(8), "8 should not be considered a prime number");
+    }
 }
