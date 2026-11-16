@@ -17,13 +17,9 @@ public class PrimeCheckerTest {
         assertFalse(primeChecker.isPrime(number), number + " should not be considered a prime number");
     }
 
-    @Test
-    public void test2IsPrime() {
-        assertTrue(primeChecker.isPrime(2), "2 should be considered a prime number");
-    }
-
-    @Test
-    public void test3IsPrime() {
-        assertTrue(primeChecker.isPrime(3), "3 should be considered a prime number");
+    @ParameterizedTest
+    @ValueSource(ints = {2, 3})
+    public void testPrimeNumbers(int number) {
+        assertTrue(primeChecker.isPrime(number), number + " should be considered a prime number");
     }
 }
